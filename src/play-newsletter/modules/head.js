@@ -1,3 +1,11 @@
+// output the head tag along with the body tag
+// 
+// <head>
+//   <body>
+// 	   <center>
+//       <div>
+// 
+
 const HEAD = `
 
 	<head>

@@ -1,15 +1,29 @@
-// PLAY NEWSLETTER TEMPLATE
-// 
+/*
 
+  PLAY NEWSLETTER TEMPLATE
+
+*/
+
+// container for the template's output
 let templateOutput = '';
+// identify the newsletter element as the output container
+const newsletter = document.getElementById('newsletter');
 
+// import the newsletter modules
 import docHead from './modules/head.js';
+import header from './modules/header.js';
+import introBody from './modules/introBody.js';
+
+
 
 // add the doc <head> to the templateOutput
 templateOutput += docHead;
+
+templateOutput += header;
+
+templateOutput += introBody;
 console.log('templateOutput: ', templateOutput)
 
-const newsletter = document.getElementById('newsletter');
 
 const domain = 'http://services.google.com/fh/files/emails/'
 
@@ -186,6 +200,8 @@ console.log('\n','\n','\n','\n','\n', 'MOVIES')
 console.log( movies.map(movie => movieHTML(movie)).join('\n') )
 
 
-
-// POPULATE THE Newsletter with the templateOutput
+// BUILD THE NEWSLETTER
+// 
+// populate the newsletter with the templateOutputS
+// 
 newsletter.innerHTML = templateOutput
