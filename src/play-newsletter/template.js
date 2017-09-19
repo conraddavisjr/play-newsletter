@@ -74,8 +74,8 @@ const songHTML = song => `
   </table>
 </td>`
 
-console.log('\n','\n','\n','\n','\n', 'SONGS')
-console.log( songs.map(song => songHTML(song)).join('\n') )
+// console.log('\n','\n','\n','\n','\n', 'SONGS')
+// console.log( songs.map(song => songHTML(song)).join('\n') )
 let songCollection = songs.map(song => songHTML(song)).join('\n')
 
 // Add the songCollection to the templateOutput
@@ -120,8 +120,8 @@ const albumHTML = album => `
   </table>
 </td>`
 
-console.log('\n','\n','\n','\n','\n', 'ALBUMS')
-console.log( albums.map(album => albumHTML(album)).join('\n') )
+// console.log('\n','\n','\n','\n','\n', 'ALBUMS')
+// console.log( albums.map(album => albumHTML(album)).join('\n') )
 
 
 const shows = [
@@ -162,8 +162,8 @@ const showHTML = show => `
   </table>
 </td>`
 
-console.log('\n','\n','\n','\n','\n', 'SHOWS')
-console.log( shows.map(show => showHTML(show)).join('\n') )
+// console.log('\n','\n','\n','\n','\n', 'SHOWS')
+// console.log( shows.map(show => showHTML(show)).join('\n') )
 
 
 
@@ -205,8 +205,8 @@ const movieHTML = movie => `
   </table>
 </td>`
 
-console.log('\n','\n','\n','\n','\n', 'MOVIES')
-console.log( movies.map(movie => movieHTML(movie)).join('\n') )
+// console.log('\n','\n','\n','\n','\n', 'MOVIES')
+// console.log( movies.map(movie => movieHTML(movie)).join('\n') )
 
 
 // BUILD THE NEWSLETTER

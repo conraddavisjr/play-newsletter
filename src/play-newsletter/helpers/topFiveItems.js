@@ -9,6 +9,25 @@ const bgColor = '#f4f4f4'
 const imgWidth = 90
 const imgHeight = 90
 
+// TEMP images
+const images = [
+  {
+    src: 'https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png',
+    alt: 'Valerian: City of Alpha'
+  },
+  {
+    src: 'https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png',
+    alt: 'Valerian: City of Alpha'
+  },
+  {
+    src: 'https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png',
+    alt: 'Valerian: City of Alpha'
+  }
+
+]
+
+
+
 const TopFiveItems = `
 
 <tr>
@@ -42,7 +61,7 @@ const TopFiveItems = `
                               <tr>
                                 <td style="font-size:0;padding:0;max-width:600px;" width="100%" align="center">
                                   ${ topFiveItemsRowOne }
-                                  ${ topFiveItemsRowTwo }
+                                  ${ topFiveItemsRowTwo(images, imgWidth, imgHeight) }
                                 </td>
                               </tr>
                               <tr>
