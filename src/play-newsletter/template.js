@@ -14,7 +14,7 @@ import docHead from './modules/head.js';
 import header from './modules/header.js';
 import introBody from './modules/introBody.js';
 import trendingApps from './modules/trendingApps.js';
-import topGames from './modules/topGames.js';
+import topGames from './helpers/topFiveItems.js';
 import topSongs from './modules/topSongs.js';
 
 
