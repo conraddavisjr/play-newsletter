@@ -11,38 +11,56 @@ const imgHeight = 90
 
 // TEMP images
 
-const rowOneImages = [
+const rowItems = [
   {
+    title: 'Futurama: Worlds of Tomorrow',
+    by: 'by TinyCo',
     src: 'https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png',
-    alt: 'Valerian: City of Alpha'
+    alt: 'Valerian: City of Alpha',
+    href: 'https://play.google.com/store/apps/details?id=com.tinyco.futurama'
   },
   {
+    title: 'Futurama: Worlds of Tomorrow',
+    by: 'by TinyCo',
     src: 'https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png',
-    alt: 'Valerian: City of Alpha'
+    alt: 'Valerian: City of Alpha',
+    href: 'https://play.google.com/store/apps/details?id=com.tinyco.futurama'
   },
   {
+    title: 'Futurama: Worlds of Tomorrow',
+    by: 'by TinyCo',
     src: 'https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png',
-    alt: 'Valerian: City of Alpha'
+    alt: 'Valerian: City of Alpha',
+    href: 'https://play.google.com/store/apps/details?id=com.tinyco.futurama'
+  },
+  {
+    title: 'Futurama: Worlds of Tomorrow',
+    by: 'by TinyCo',
+    src: 'https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png',
+    alt: 'Valerian: City of Alpha',
+    href: 'https://play.google.com/store/apps/details?id=com.tinyco.futurama'
+  },
+  {
+    title: 'Futurama: Worlds of Tomorrow',
+    by: 'by TinyCo',
+    src: 'https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png',
+    alt: 'Valerian: City of Alpha',
+    href: 'https://play.google.com/store/apps/details?id=com.tinyco.futurama'
   }
 
 ]
 
-const rowTwoImages = [
-  {
-    src: 'https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png',
-    alt: 'Valerian: City of Alpha'
-  },
-  {
-    src: 'https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png',
-    alt: 'Valerian: City of Alpha'
-  }
+const rowOneItems = rowItems.splice(0, 3)
+const rowTwoItems = rowItems.splice(0, 2)
 
-]
+console.log('rowOneItems: ', rowOneItems)
+console.log('rowTwoItems: ', rowTwoItems)
 
 
+// container for the top five items
+let topFiveItems = ''
 
-const TopFiveItems = `
-
+topFiveItems += `
 <tr>
   <td>
     <table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" width="100%">
@@ -72,9 +90,14 @@ const TopFiveItems = `
                                 <td class="outlookheight20" height="10" style="font-size:1px;line-height:1px;mso-line-height-rule:exactly;padding:0;">&nbsp;</td>
                               </tr>
                               <tr>
-                                <td style="font-size:0;padding:0;max-width:600px;" width="100%" align="center">
-                                  ${ topFiveItemsRowOne(rowOneImages, imgWidth, imgHeight) }
-                                  ${ topFiveItemsRowTwo(rowTwoImages, imgWidth, imgHeight) }
+                                <td style="font-size:0;padding:0;max-width:600px;" width="100%" align="center">`
+
+                                 
+                                topFiveItems += topFiveItemsRowOne(rowOneItems, imgWidth, imgHeight)
+                                topFiveItems += topFiveItemsRowTwo(rowTwoItems, imgWidth, imgHeight)
+                                  
+
+                                topFiveItems += `
                                 </td>
                               </tr>
                               <tr>
@@ -101,4 +124,4 @@ const TopFiveItems = `
 </tr>
 `;
 
-export default TopFiveItems;
+export default topFiveItems;

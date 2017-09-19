@@ -1,7 +1,7 @@
 // output the newsletter's top items (2nd row)
 // 
 
-function topFiveItemsRowTwo(images, imgWidth, imgHeight) { 
+function topFiveItemsRowTwo(rowItems, imgWidth, imgHeight) { 
 
 	// container for the row of items
 	let rowTwo = ''
@@ -18,14 +18,14 @@ function topFiveItemsRowTwo(images, imgWidth, imgHeight) {
 		          <tr>`
 
 		          // loop through the items in row
-							images.map((item, i) => {
+							rowItems.map((item, i) => {
 		          	rowTwo += `<td valign="top" width="100">
 		              <table cellpadding="0" cellspacing="0" border="0" width="100%">
 		                <tr>
 		                  <td>
 		                    <table cellpadding="0" cellspacing="0" border="0" align="center">
 		                      <tr>
-		                        <td align="center"> <img src="${images[i].src}" alt="${images[i].alt}" width="${imgWidth}" height="${imgHeight}" style="display:block;" border="0" /></td>
+		                        <td align="center"> <img src="${rowItems[i].src}" alt="${rowItems[i].alt}" width="${imgWidth}" height="${imgHeight}" style="display:block;" border="0" /></td>
 		                      </tr>
 		                      <tr>
 		                        <td valign="top" width="100" style="padding-left: 10px;">
