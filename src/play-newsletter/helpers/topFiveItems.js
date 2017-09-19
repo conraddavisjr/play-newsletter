@@ -6,8 +6,10 @@ import topFiveItemsRowTwo from '../modules/topFiveItemsRowTwo.js'
 
 const title = 'TOP NEW DOWNLOADED GAMES'
 const bgColor = '#f4f4f4'
+const imgWidth = 90
+const imgHeight = 90
 
-const TOPGAMES = `
+const TopFiveItems = `
 
 <tr>
   <td>
@@ -67,4 +69,4 @@ const TOPGAMES = `
 </tr>
 `;
 
-export default TOPGAMES;
+export default TopFiveItems;

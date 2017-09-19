@@ -1,6 +1,18 @@
 // output the newsletter's intro body copy
 // 
 
+const imgWidth = 90
+const imgHeight = 90
+
+// TEMP images
+const images = [
+	{
+		src: 'https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png',
+		alt: 'Valerian: City of Alpha'
+	}
+
+]
+
 const ROWTWO = `
 
 <!--[if (gte mso 9)|(IE)]></td><td width="240" valign="top"><![endif]-->
@@ -16,7 +28,7 @@ const ROWTWO = `
                   <td>
                     <table cellpadding="0" cellspacing="0" border="0" align="center">
                       <tr>
-                        <td align="center"> <img src="https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png" alt="Valerian: City of Alpha" width="90" height="90" style="display:block;" border="0" /></td>
+                        <td align="center"> <img src="${images[0].src}" alt="${images[0].alt}" width="${imgWidth}" height="${imgHeight}" style="display:block;" border="0" /></td>
                       </tr>
                       <tr>
                         <td valign="top" width="100" style="padding-left: 10px;">
