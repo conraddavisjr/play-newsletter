@@ -13,15 +13,24 @@ const newsletter = document.getElementById('newsletter');
 import docHead from './modules/head.js';
 import header from './modules/header.js';
 import introBody from './modules/introBody.js';
-
+import trendingApps from './modules/trendingApps.js';
+import topGames from './modules/topGames.js';
+import topSongs from './modules/topSongs.js';
 
 
 // add the doc <head> to the templateOutput
-templateOutput += docHead;
+templateOutput += docHead
+// add the newsletter header to the templateOutput
+templateOutput += header
+// add the newsletter's intro body to the templateOutput
+templateOutput += introBody
+// 
+templateOutput += trendingApps
+// 
+templateOutput += topGames
+// 
+templateOutput += topSongs
 
-templateOutput += header;
-
-templateOutput += introBody;
 console.log('templateOutput: ', templateOutput)
 
 
