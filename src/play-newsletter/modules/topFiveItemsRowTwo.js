@@ -34,7 +34,15 @@ function topFiveItemsRowTwo(rowItems, imgWidth, imgHeight) {
 		                              <td height="10" style="font-size:1px;line-height:1px;mso-line-height-rule:exactly;padding:0;">&nbsp;</td>
 		                            </tr>
 		                            <tr>
-		                              <td style="text-align:left;line-height: 14px; font-size: 12px; font-weight: 700;font-family: 'Roboto',Helvetica,Arial,sans-serif; text-transform: uppercase;text-decoration: none !important;"> <a href="https://play.google.com/store/apps/details?id=com.spilgames.Valerian" target="_blank" style="text-decoration: none !important;color:#414141;font-size:11px;font-family: 'Roboto',Helvetica,Arial,sans-serif;letter-spacing:normal;line-height: 14px; text-transform: uppercase; font-weight: 700;">Valerian: City of Alpha<span style="color:#999999; font-size:12px;letter-spacing:normal;line-height: 14px; font-weight:400;"><br />by Spil Games</span></a></td>
+		                              <td style="text-align:left;line-height: 14px; font-size: 12px; font-weight: 700;font-family: 'Roboto',Helvetica,Arial,sans-serif; text-transform: uppercase;text-decoration: none !important;"> 
+		                              	<a href="${rowItems[i].href}" target="_blank" style="text-decoration: none !important;color:#414141;font-size:11px;font-family: 'Roboto',Helvetica,Arial,sans-serif;letter-spacing:normal;line-height: 14px; text-transform: uppercase; font-weight: 700;">
+		                              		${rowItems[i].title}
+			                              	<span style="color:#999999; font-size:12px;letter-spacing:normal;line-height: 14px; font-weight:400;">
+				                              	<br />
+				                              	${rowItems[i].author}
+			                              	</span>
+			                              </a>
+			                            </td>
 		                            </tr>
 		                          </table>
 		                        </td>

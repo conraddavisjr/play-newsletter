@@ -39,7 +39,7 @@ function topFiveItemsRowOne(rowItems, imgWidth, imgHeight) {
                                       ${rowItems[i].title}
                                       <span style="color:#999999; font-size:12px;letter-spacing:normal;line-height: 14px; font-weight:400;">
                                         <br />
-                                        ${rowItems[i].by}
+                                        ${rowItems[i].author}
                                       </span>
                                     </a>
                                   </td>

@@ -78,13 +78,17 @@ function compileJS(bundle, minify) {
       filename: OUTPUT_FILENAME
     },
     module: {
-      loaders: [{
-        test: /\.js$/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['es2015', 'stage-2']
+      loaders: [
+        { 
+          test: [/\.js$/], 
+          loader: ['babel-loader'],
+          query: { presets: ['es2015', 'stage-2'] }
+        },
+        {
+          test: /\.json$/,
+          loader: 'json-loader'
         }
-      }]
+      ]
     },
     plugins: minify ? [ new UglifyJSPlugin() ] : [],
     devtool: minify ? '' : 'source-map',
