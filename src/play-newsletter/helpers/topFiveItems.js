@@ -10,11 +10,24 @@ const imgWidth = 90
 const imgHeight = 90
 
 // TEMP images
-const images = [
+
+const rowOneImages = [
   {
     src: 'https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png',
     alt: 'Valerian: City of Alpha'
   },
+  {
+    src: 'https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png',
+    alt: 'Valerian: City of Alpha'
+  },
+  {
+    src: 'https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png',
+    alt: 'Valerian: City of Alpha'
+  }
+
+]
+
+const rowTwoImages = [
   {
     src: 'https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png',
     alt: 'Valerian: City of Alpha'
@@ -60,8 +73,8 @@ const TopFiveItems = `
                               </tr>
                               <tr>
                                 <td style="font-size:0;padding:0;max-width:600px;" width="100%" align="center">
-                                  ${ topFiveItemsRowOne }
-                                  ${ topFiveItemsRowTwo(images, imgWidth, imgHeight) }
+                                  ${ topFiveItemsRowOne(rowOneImages, imgWidth, imgHeight) }
+                                  ${ topFiveItemsRowTwo(rowTwoImages, imgWidth, imgHeight) }
                                 </td>
                               </tr>
                               <tr>

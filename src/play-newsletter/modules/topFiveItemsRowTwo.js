@@ -1,23 +1,14 @@
-// output the newsletter's intro body copy
+// output the newsletter's top items (2nd row)
 // 
-
-// const imgWidth = 90
-// const imgHeight = 90
-
-// // TEMP images
-// const images = [
-// 	{
-// 		src: 'https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png',
-// 		alt: 'Valerian: City of Alpha'
-// 	}
-
-// ]
 
 function topFiveItemsRowTwo(images, imgWidth, imgHeight) { 
 
-	console.log('row2 Called')
-	return (
-		`
+	// container for the row of items
+	let rowTwo = ''
+
+	// HTML for the top portion of the row two container
+	rowTwo +=
+	`
 		<!--[if (gte mso 9)|(IE)]></td><td width="240" valign="top"><![endif]-->
 		<div style="display:inline-block;max-width:240px;vertical-align:top;width:100%;">
 		  <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
@@ -25,9 +16,10 @@ function topFiveItemsRowTwo(images, imgWidth, imgHeight) {
 		      <td>
 		        <table border="0" cellpadding="0" cellspacing="0" width="100%">
 		          <tr>`
-		            
+
+		          // loop through the items in row
 							images.map((item, i) => {
-		          	`<td valign="top" width="100">
+		          	rowTwo += `<td valign="top" width="100">
 		              <table cellpadding="0" cellspacing="0" border="0" width="100%">
 		                <tr>
 		                  <td>
@@ -57,7 +49,8 @@ function topFiveItemsRowTwo(images, imgWidth, imgHeight) {
 		            </td>`
 		          })
 
-
+						// HTML for the bottom portion of the row two container
+		        rowTwo +=
 		         ` </tr>
 		        </table>
 		      </td>
@@ -66,7 +59,8 @@ function topFiveItemsRowTwo(images, imgWidth, imgHeight) {
 		</div>
 		<!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
 		`
-	)
+
+	return rowTwo
 
 }
 
