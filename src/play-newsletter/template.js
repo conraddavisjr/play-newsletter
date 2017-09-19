@@ -70,7 +70,7 @@ console.log( songs.map(song => songHTML(song)).join('\n') )
 let songCollection = songs.map(song => songHTML(song)).join('\n')
 
 // Add the songCollection to the templateOutput
-templateOutput += songCollection
+// templateOutput += songCollection
 
 
 const albums = [
@@ -202,6 +202,6 @@ console.log( movies.map(movie => movieHTML(movie)).join('\n') )
 
 // BUILD THE NEWSLETTER
 // 
-// populate the newsletter with the templateOutputS
+// populate the newsletter with the templateOutput content
 // 
 newsletter.innerHTML = templateOutput
