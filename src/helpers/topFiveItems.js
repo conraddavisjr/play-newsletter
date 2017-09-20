@@ -1,8 +1,8 @@
 // output the newsletter's intro body copy
 // 
 
-topFiveItemsRowOne = require('../modules/topFiveItemsRowOne.js')
-topFiveItemsRowTwo = require('../modules/topFiveItemsRowTwo.js')
+topFiveItemsRowOne = require('../templates/topFiveItemsRowOne.js')
+topFiveItemsRowTwo = require('../templates/topFiveItemsRowTwo.js')
 
 function topFiveItems( title, rowItems ) {
 

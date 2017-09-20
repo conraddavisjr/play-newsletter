@@ -8,7 +8,7 @@
   "devDependencies": {},
   "scripts": {
     "start": "nodemon -w . --exec 'npm run compile'",
-    "compile": "node src/dist/compile"
+    "compile": "node compile"
   },
   "keywords": [],
   "authors": [
