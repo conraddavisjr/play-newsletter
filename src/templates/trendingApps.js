@@ -6,7 +6,7 @@
 //       <div>
 // 
 
-const TRENDINGAPPS = `
+const trendingApps = `
 
 	<tr>
     <td align="center">
@@ -247,4 +247,5 @@ const TRENDINGAPPS = `
   </tr>
 `;
 
-export default TRENDINGAPPS;
+// 
+module.exports = trendingApps;

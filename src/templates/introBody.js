@@ -1,7 +1,7 @@
 // output the newsletter's intro body copy
 // 
 
-const INTROBODY = `
+const introBody = `
 
 																			<tr>
 																		    <td align="center">
@@ -78,4 +78,4 @@ const INTROBODY = `
   </tr>
 `;
 
-export default INTROBODY;
+module.exports = introBody;

@@ -1,7 +1,7 @@
 // output the header of the newsletter
 // 
 
-const HEADER = `
+const header = `
 
 	<table role="presentation" align="center" width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width: 820px;" bgcolor="#ffffff">
     <tr>
@@ -71,4 +71,4 @@ const HEADER = `
                                         </tr>
 `;
 
-export default HEADER;
+module.exports = header;

@@ -1,8 +1,8 @@
 // output the newsletter's intro body copy
 // 
 
-import topFiveItemsRowOne from '../modules/topFiveItemsRowOne.js'
-import topFiveItemsRowTwo from '../modules/topFiveItemsRowTwo.js'
+topFiveItemsRowOne = require('../templates/topFiveItemsRowOne.js')
+topFiveItemsRowTwo = require('../templates/topFiveItemsRowTwo.js')
 
 function topFiveItems( title, rowItems ) {
 
@@ -123,4 +123,4 @@ function topFiveItems( title, rowItems ) {
   return topFiveItems;
 }
 
-export default topFiveItems;
+module.exports = topFiveItems;

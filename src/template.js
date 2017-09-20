@@ -6,20 +6,16 @@
 
 // container for the template's output
 let templateOutput = '';
-// identify the newsletter element as the output container
-const newsletter = document.getElementById('newsletter');
 
-import newsletterData from './data/newsletter-data.json'; 
+// JSON data
+newsletterData = require('./data/newsletter-data.json')
 const { topFive } = newsletterData
 
-console.log('topFive: ', Object.keys(topFive))
-console.log('newsletterData: ', newsletterData.topFive.games )
-
-// import the newsletter modules
-import header from './modules/header.js';
-import introBody from './modules/introBody.js';
-import trendingApps from './modules/trendingApps.js';
-import topFiveItems from './helpers/topFiveItems.js';
+// import the newsletter templates
+header = require('./templates/header.js')
+introBody = require('./templates/introBody.js')
+trendingApps = require('./templates/trendingApps.js')
+topFiveItems = require('./helpers/topFiveItems.js')
 
 // add the newsletter header to the templateOutput
 templateOutput += header
@@ -47,4 +43,4 @@ console.log('templateOutput: ', templateOutput)
 // 
 // populate the newsletter with the templateOutput content
 // 
-newsletter.innerHTML = templateOutput
+module.exports = templateOutput

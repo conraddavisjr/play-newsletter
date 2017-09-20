@@ -72,4 +72,4 @@ function topFiveItemsRowTwo(rowItems, imgWidth, imgHeight) {
 
 }
 
-export default topFiveItemsRowTwo;
+module.exports = topFiveItemsRowTwo;
