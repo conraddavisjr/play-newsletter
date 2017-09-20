@@ -26,12 +26,12 @@ function topFiveItems( title, rowItems ) {
       titleColor: '#d40000'
     },
     movies: {
-      dimensions: [90, 90],
+      dimensions: [90, 138],
       titleColor: '#d40000',
       bgcolor: '#f4f4f4'
     },
     books: {
-      dimensions: [90, 90],
+      dimensions: [90, 138],
       titleColor: '#0093ed'
     }
   }
