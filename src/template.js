@@ -18,6 +18,9 @@ header = require('./templates/header.js')
 introBody = require('./templates/introBody.js')
 trendingApps = require('./templates/trendingApps.js')
 topFiveItems = require('./helpers/topFiveItems.js')
+whatsComing = require('./templates/whatsComing.js')
+cta = require('./templates/cta.js')
+footer = require('./templates/footer.js')
 htmlFoot = require('./templates/htmlFoot.js')
 
 
@@ -44,6 +47,11 @@ templateOutput += `</table></td></tr>`
 console.log('templateOutput: ', templateOutput)
 
 
+// WHAT'S COMING SECTION
+templateOutput += whatsComing
+
+templateOutput += cta
+templateOutput += footer
 
 // add the newsletter DOC closing tags to the templateOutput
 templateOutput += htmlFoot
