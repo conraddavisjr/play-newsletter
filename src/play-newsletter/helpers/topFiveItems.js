@@ -6,10 +6,32 @@ import topFiveItemsRowTwo from '../modules/topFiveItemsRowTwo.js'
 
 function topFiveItems( title, rowItems ) {
 
-  const imgWidth = 90
-  const imgHeight = 90
-  // a collection of row types with an alternate color background
-  const rowsWithAltBgColor = [ 'games', 'albums', 'movies' ]
+  const rowSpecs = {
+    games: {
+      dimensions: [90, 90], // width, height
+      titleColor: '#00bf60'
+    },
+    songs: {
+      dimensions: [90, 90],
+      titleColor: '#ff9000'
+    },
+    albums: {
+      dimensions: [90, 90],
+      titleColor: '#ff9000'
+    },
+    shows: {
+      dimensions: [90, 90],
+      titleColor: '#d40000'
+    },
+    movies: {
+      dimensions: [90, 90],
+      titleColor: '#d40000'
+    },
+    books: {
+      dimensions: [90, 90],
+      titleColor: '#0093ed'
+    }
+  }
 
   // parse the last word of the row title to determine the bgColor of the items row
   function getLastWord(title) {
@@ -17,13 +39,10 @@ function topFiveItems( title, rowItems ) {
     return lastWord[lastWord.length - 1].toLowerCase();
   }
 
-  // default the bgColor to white
-  let bgColor = '#ffffff'
-
-  // determine if we will serve an alt bg color - ex: games has a bg color of #f4f4f4
-  rowsWithAltBgColor.map((titleName)=> {
-    if (getLastWord(title).indexOf([titleName])) bgColor = '#f4f4f4'
-  })
+  const { dimensions, titleColor } = rowSpecs[getLastWord(title)]
+  const imgWidth = dimensions[0]
+  const imgHeight = dimensions[1]
+  const rowTitleColor = titleColor
 
   // splice the rowItems into rows one and two
   const rowOneItems = rowItems.slice(0, 3)
@@ -57,7 +76,7 @@ function topFiveItems( title, rowItems ) {
                                   <td height="20" style="font-size:1px;line-height:1px;mso-line-height-rule:exactly;padding:0;">&nbsp;</td>
                                 </tr>
                                 <tr>
-                                  <td style="padding-left: 10px; color:#00bf60; font-size:16px;font-family: 'Roboto',Helvetica,Arial,sans-serif;letter-spacing:normal;line-height: 22px; text-align: left; text-transform: uppercase;font-weight: 700;"> ${title} </td>
+                                  <td style="padding-left: 10px; color:${titleColor}; font-size:16px;font-family: 'Roboto',Helvetica,Arial,sans-serif;letter-spacing:normal;line-height: 22px; text-align: left; text-transform: uppercase;font-weight: 700;"> ${title} </td>
                                 </tr>
                                 <tr>
                                   <td class="outlookheight20" height="10" style="font-size:1px;line-height:1px;mso-line-height-rule:exactly;padding:0;">&nbsp;</td>

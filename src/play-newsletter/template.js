@@ -25,8 +25,6 @@ import header from './modules/header.js';
 import introBody from './modules/introBody.js';
 import trendingApps from './modules/trendingApps.js';
 import topFiveItems from './helpers/topFiveItems.js';
-import topGames from './helpers/topFiveItems.js';
-import topSongs from './helpers/topFiveItems.js';
 
 
 // add the doc <head> to the templateOutput
