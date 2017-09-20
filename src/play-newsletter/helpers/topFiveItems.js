@@ -4,18 +4,37 @@
 import topFiveItemsRowOne from '../modules/topFiveItemsRowOne.js'
 import topFiveItemsRowTwo from '../modules/topFiveItemsRowTwo.js'
 
-function topFiveItems( title, bgColor, imgWidth, imgHeight, rowItems ) {
+function topFiveItems( title, rowItems ) {
+
+  const imgWidth = 90
+  const imgHeight = 90
+  // a collection of row types with an alternate color background
+  const rowsWithAltBgColor = [ 'games', 'albums', 'movies' ]
+
+  // parse the last word of the row title to determine the bgColor of the items row
+  function getLastWord(title) {
+    var lastWord = title.split(" ");
+    return lastWord[lastWord.length - 1].toLowerCase();
+  }
+
+  // default the bgColor to white
+  let bgColor = '#ffffff'
+
+  // determine if we will serve an alt bg color - ex: games has a bg color of #f4f4f4
+  rowsWithAltBgColor.map((titleName)=> {
+    if (getLastWord(title).indexOf([titleName])) bgColor = '#f4f4f4'
+  })
 
   // splice the rowItems into rows one and two
-  const rowOneItems = rowItems.splice(0, 3)
-  const rowTwoItems = rowItems.splice(0, 2)
+  const rowOneItems = rowItems.slice(0, 3)
+  const rowTwoItems = rowItems.slice(0, 2)
 
   // container for the top five items
   let topFiveItems = ''
   
   // top scaffolding for the top five items row element
   topFiveItems += `
-  <tr>
+  <tr class="top_five_row">
     <td>
       <table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" width="100%">
         <tr>
@@ -25,7 +44,7 @@ function topFiveItems( title, bgColor, imgWidth, imgHeight, rowItems ) {
               <tr>
                 <td align="center">
                   <!--[if (gte mso 9)|(IE)]><table width="820" cellpadding="0" cellspacing="0" border="0" bgcolor="f4f4f4"><tr><td valign="top"> <![endif]-->
-                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="background-color: ${bgColor}">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
                     <tr>
                       <td align="center">
                         <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">

@@ -7,54 +7,10 @@
 
 import newsletterData from './data/newsletter-data.json'; 
 
-console.log('newsletterData: ', newsletterData )
+console.log('newsletterData: ', newsletterData.topFive.games )
 
 const title = 'TOP NEW DOWNLOADED GAMES'
 const bgColor = '#f4f4f4'
-const imgWidth = 90
-const imgHeight = 90
-
-// TEMP rowItems
-// TODO: make json file (perhaps)
-
-const rowItems = [
-  {
-    title: 'Futurama: Worlds of Tomorrow',
-    author: 'by TinyCo',
-    src: 'https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png',
-    alt: 'Valerian: City of Alpha',
-    href: 'https://play.google.com/store/apps/details?id=com.tinyco.futurama'
-  },
-  {
-    title: 'Futurama: Worlds of Tomorrow',
-    author: 'by TinyCo',
-    src: 'https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png',
-    alt: 'Valerian: City of Alpha',
-    href: 'https://play.google.com/store/apps/details?id=com.tinyco.futurama'
-  },
-  {
-    title: 'Futurama: Worlds of Tomorrow',
-    author: 'by TinyCo',
-    src: 'https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png',
-    alt: 'Valerian: City of Alpha',
-    href: 'https://play.google.com/store/apps/details?id=com.tinyco.futurama'
-  },
-  {
-    title: 'Futurama: Worlds of Tomorrow',
-    author: 'by TinyCo',
-    src: 'https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png',
-    alt: 'Valerian: City of Alpha',
-    href: 'https://play.google.com/store/apps/details?id=com.tinyco.futurama'
-  },
-  {
-    title: 'Futurama: Worlds of Tomorrow',
-    author: 'by TinyCo',
-    src: 'https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png',
-    alt: 'Valerian: City of Alpha',
-    href: 'https://play.google.com/store/apps/details?id=com.tinyco.futurama'
-  }
-]
-
 
 // container for the template's output
 let templateOutput = '';
@@ -67,7 +23,7 @@ import header from './modules/header.js';
 import introBody from './modules/introBody.js';
 import trendingApps from './modules/trendingApps.js';
 import topGames from './helpers/topFiveItems.js';
-import topSongs from './modules/topSongs.js';
+import topSongs from './helpers/topFiveItems.js';
 
 
 // add the doc <head> to the templateOutput
@@ -78,10 +34,16 @@ templateOutput += header
 templateOutput += introBody
 // 
 templateOutput += trendingApps
-// title, bgColor, imgWidth, imgHeight, rowItems
-// templateOutput += topGames()
+// title, imgWidth, imgHeight, rowItems
+
+templateOutput += `<table class="top_five_row" role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" width="100%">`
+
+templateOutput += topGames(newsletterData.topFive.games.title, newsletterData.topFive.games.rowItems)
 // 
-templateOutput += topSongs
+templateOutput += topSongs(newsletterData.topFive.games.title, newsletterData.topFive.games.rowItems)
+templateOutput += topSongs(newsletterData.topFive.games.title, newsletterData.topFive.games.rowItems)
+
+templateOutput += `</table>`
 
 console.log('templateOutput: ', templateOutput)
 

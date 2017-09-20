@@ -77,6 +77,10 @@ const HEAD = `
 	    text-underline: none !important
 	  }
 
+	  .top_five_row .top_five_row:nth-child(2n-1) {
+	    background-color: #f4f4f4;
+	  }
+
 	  @media screen and (max-width:600px) and (max-device-width: 600px) {
 	    .heightAuto,
 	    .heightOutlook {
