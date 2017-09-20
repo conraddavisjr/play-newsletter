@@ -4,8 +4,6 @@
 
 		"games": {
 			"title": "TOP NEW DOWNLOADED GAMES",
-			"imgWidth": 90,
-			"imgHeight": 90,
 			"rowItems": [
 			  {
 			    "title": "Futurama: Worlds of Tomorrow",
@@ -46,8 +44,6 @@
 		},
 		"songs": {
 			"title": "TOP 5 STREAMED SONGS",
-			"imgWidth": 90,
-			"imgHeight": 90,
 			"rowItems": [
 			  {
 			    "title": "Futurama: Worlds of Tomorrow",
@@ -88,8 +84,6 @@
 		},
 		"albums": {
 			"title": "TOP 5 PURCHASED ALBUMS",
-			"imgWidth": 90,
-			"imgHeight": 90,
 			"rowItems": [
 			  {
 			    "title": "Futurama: Worlds of Tomorrow",
@@ -130,8 +124,6 @@
 		},
 		"shows": {
 			"title": "TOP 5 TV SHOWS",
-			"imgWidth": 90,
-			"imgHeight": 90,
 			"rowItems": [
 			  {
 			    "title": "Futurama: Worlds of Tomorrow",
@@ -172,8 +164,6 @@
 		},
 		"movies": {
 			"title": "TOP 5 MOVIES",
-			"imgWidth": 90,
-			"imgHeight": 90,
 			"rowItems": [
 			  {
 			    "title": "Futurama: Worlds of Tomorrow",
@@ -212,10 +202,8 @@
 			  }
 			]
 		},
-		"movies": {
-			"title": "TOP 5 MOVIES",
-			"imgWidth": 90,
-			"imgHeight": 90,
+		"books": {
+			"title": "TOP 5 NEW BOOKS",
 			"rowItems": [
 			  {
 			    "title": "Futurama: Worlds of Tomorrow",

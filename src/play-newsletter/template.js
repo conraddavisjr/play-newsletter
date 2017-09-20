@@ -13,22 +13,14 @@ import newsletterData from './data/newsletter-data.json';
 const { topFive } = newsletterData
 
 console.log('topFive: ', Object.keys(topFive))
-
-
 console.log('newsletterData: ', newsletterData.topFive.games )
 
-const bgColor = '#f4f4f4'
-
 // import the newsletter modules
-import docHead from './modules/head.js';
 import header from './modules/header.js';
 import introBody from './modules/introBody.js';
 import trendingApps from './modules/trendingApps.js';
 import topFiveItems from './helpers/topFiveItems.js';
 
-
-// add the doc <head> to the templateOutput
-templateOutput += docHead
 // add the newsletter header to the templateOutput
 templateOutput += header
 // add the newsletter's intro body to the templateOutput

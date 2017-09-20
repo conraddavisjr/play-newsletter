@@ -9,7 +9,8 @@ function topFiveItems( title, rowItems ) {
   const rowSpecs = {
     games: {
       dimensions: [90, 90], // width, height
-      titleColor: '#00bf60'
+      titleColor: '#00bf60',
+      bgcolor: '#f4f4f4'
     },
     songs: {
       dimensions: [90, 90],
@@ -17,7 +18,8 @@ function topFiveItems( title, rowItems ) {
     },
     albums: {
       dimensions: [90, 90],
-      titleColor: '#ff9000'
+      titleColor: '#ff9000',
+      bgcolor: '#f4f4f4'
     },
     shows: {
       dimensions: [90, 90],
@@ -25,7 +27,8 @@ function topFiveItems( title, rowItems ) {
     },
     movies: {
       dimensions: [90, 90],
-      titleColor: '#d40000'
+      titleColor: '#d40000',
+      bgcolor: '#f4f4f4'
     },
     books: {
       dimensions: [90, 90],
@@ -39,10 +42,11 @@ function topFiveItems( title, rowItems ) {
     return lastWord[lastWord.length - 1].toLowerCase();
   }
 
-  const { dimensions, titleColor } = rowSpecs[getLastWord(title)]
+  const { dimensions, titleColor, bgcolor } = rowSpecs[getLastWord(title)]
   const imgWidth = dimensions[0]
   const imgHeight = dimensions[1]
   const rowTitleColor = titleColor
+  const backgroundColor = bgcolor || '#ffffff'
 
   // splice the rowItems into rows one and two
   const rowOneItems = rowItems.slice(0, 3)
@@ -53,13 +57,13 @@ function topFiveItems( title, rowItems ) {
   
   // top scaffolding for the top five items row element
   topFiveItems += `
-  <tr class="top_five_row">
+  <tr class="top_five_row" bgcolor="#ffffff">
     <td>
-      <table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" width="100%">
+      <table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="${backgroundColor}">
         <tr>
           <td>
             <!--[if (gte mso 9)|(IE)]><table width="820" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td align="center"> <![endif]-->
-            <table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" width="100%">
+            <table role="presentation" align="center" cellpadding="0" cellspacing="0" border="0" width="100%" >
               <tr>
                 <td align="center">
                   <!--[if (gte mso 9)|(IE)]><table width="820" cellpadding="0" cellspacing="0" border="0" bgcolor="f4f4f4"><tr><td valign="top"> <![endif]-->
