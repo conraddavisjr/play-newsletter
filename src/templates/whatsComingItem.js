@@ -97,6 +97,9 @@ let output = '';
   </div>
 
 `
+
+return output;
+
 } 
 
 module.exports = whatsComingItem;
