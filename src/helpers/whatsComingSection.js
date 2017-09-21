@@ -1,8 +1,14 @@
 const whatsComingRow = require('../templates/whatsComingRow.js')
 
+function whatsComingSection( whatsComingItems ) {
 
-function whatsComingSection( title, rowItems ) {
+  // 
+  const keyValues = Object.keys(whatsComingItems);
 
+  // splice the whatsComingItems into rows one and two
+  const rowOneItems = keyValues.slice(0, 2)
+  const rowTwoItems = keyValues.slice(2, 2)
+  const rowThreeItems = keyValues.slice(4, 2)
 	let output = '';
 
   // Whats coming section outter HTML
@@ -39,7 +45,7 @@ function whatsComingSection( title, rowItems ) {
 		                  </tr>
 	`
 
-  output += whatsComingRow();
+  output += whatsComingRow(rowOneItems, whatsComingItems);
 	
 	return output;
 

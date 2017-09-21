@@ -10,7 +10,7 @@ let templateOutput = '';
 // JSON data
 newsletterData = require('./data/newsletter-data.json')
 // deconstruct the data obj
-const { topFive } = newsletterData
+const { topFive, whatsComing } = newsletterData
 
 // import the newsletter templates
 htmlHead = require('./templates/htmlHead.js')
@@ -48,7 +48,7 @@ console.log('templateOutput: ', templateOutput)
 
 
 // WHAT'S COMING SECTION
-templateOutput += whatsComingSection()
+templateOutput += whatsComingSection(whatsComing)
 
 templateOutput += cta
 templateOutput += footer
