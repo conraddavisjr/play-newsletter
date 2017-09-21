@@ -10,13 +10,13 @@ let templateOutput = '';
 // JSON data
 newsletterData = require('./data/newsletter-data.json')
 // deconstruct the data obj
-const { topFive, whatsComing } = newsletterData
+const { topTrendingApps, topFive, whatsComing } = newsletterData
 
 // import the newsletter templates
 htmlHead = require('./templates/htmlHead.js')
 header = require('./templates/header.js')
 introBody = require('./templates/introBody.js')
-trendingApps = require('./templates/trendingApps.js')
+trendingApps = require('./helpers/trendingApps.js')
 topFiveItems = require('./helpers/topFiveItems.js')
 whatsComingSection = require('./helpers/whatsComingSection.js')
 cta = require('./templates/cta.js')
@@ -30,8 +30,12 @@ templateOutput += htmlHead
 templateOutput += header
 // add the newsletter's intro body to the templateOutput
 templateOutput += introBody
-// add the trending apps section to the templateOutput
-templateOutput += trendingApps
+
+
+// 
+// TRENDING APPS SECTION
+// 
+templateOutput += trendingApps(topTrendingApps)
 
 // 
 // TOP FIVE SECTION
@@ -44,14 +48,14 @@ Object.keys(topFive).map((rowItem) => {
 
 templateOutput += `</table></td></tr>`
 
-console.log('templateOutput: ', templateOutput)
-
-
+// 
 // WHAT'S COMING SECTION
-console.log('whatsComing: ', whatsComing);
+// 
 templateOutput += whatsComingSection(whatsComing)
 
+// CTA
 templateOutput += cta
+// FOOTER
 templateOutput += footer
 
 // add the newsletter DOC closing tags to the templateOutput

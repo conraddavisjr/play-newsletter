@@ -1,4 +1,37 @@
 {
+	"topTrendingApps": [
+		{
+			"title": "1st HBO NOW",
+			"src": "https://services.google.com/fh/files/emails/gp_nl_august17_hbo_now.png",
+			"alt": "HBO Now",
+			"copy": "The much anticipated premiere of “Game of Thrones” season 7 on July 16th caused a spike in user interest in HBO Now."
+		},
+		{
+			"title": "2nd HBO NOW",
+			"src": "https://services.google.com/fh/files/emails/gp_nl_august17_hbo_now.png",
+			"alt": "HBO Now",
+			"copy": "The much anticipated premiere of “Game of Thrones” season 7 on July 16th caused a spike in user interest in HBO Now."
+		},
+		{
+			"title": "3rd HBO NOW",
+			"src": "https://services.google.com/fh/files/emails/gp_nl_august17_hbo_now.png",
+			"alt": "HBO Now",
+			"copy": "The much anticipated premiere of “Game of Thrones” season 7 on July 16th caused a spike in user interest in HBO Now."
+		},
+		{
+			"title": "HBO NOW",
+			"src": "https://services.google.com/fh/files/emails/gp_nl_august17_hbo_now.png",
+			"alt": "HBO Now",
+			"copy": "The much anticipated premiere of “Game of Thrones” season 7 on July 16th caused a spike in user interest in HBO Now."
+		},
+		{
+			"title": "HBO NOW",
+			"src": "https://services.google.com/fh/files/emails/gp_nl_august17_hbo_now.png",
+			"alt": "HBO Now",
+			"copy": "The much anticipated premiere of “Game of Thrones” season 7 on July 16th caused a spike in user interest in HBO Now."
+		}
+
+	],
 
 	"topFive": {
 
