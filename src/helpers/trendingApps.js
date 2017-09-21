@@ -1,6 +1,8 @@
 const trendingAppsItem = require('../templates/trendingAppsItem.js')
 
-function trendingApps(appItems) {
+function trendingApps(topTrendingApps) {
+
+const { title, trendingItems } = topTrendingApps
 
 let output = '';
 
@@ -24,7 +26,7 @@ output += `
                         <table style="max-width: 400px;" align="center" cellpadding="0" cellspacing="0" border="0" width="100%">
                           <tr>
                             <td style="text-align:center; text-transform: uppercase;color:#ffffff;font-family: Roboto,Helvetica,Arial,sans-serif;font-size:24px;letter-spacing:normal;line-height: 34px;">
-                              <h3 style="font-size: 24px; margin-top: 25px; margin-bottom: 25px;"><strong>TOP TRENDING APPS IN July</strong></h3></td>
+                              <h3 style="font-size: 24px; margin-top: 25px; margin-bottom: 25px;"><strong>${title}</strong></h3></td>
                           </tr>
                         </table>
                       </td>
@@ -46,8 +48,8 @@ output += `
                             <td valign="top">
                               <table cellpadding="0" cellspacing="0" border="0" width="100%" style="max-width: 560px;" align="center">
                               `
-                                appItems.map((appItem) => {
-                                  output += trendingAppsItem(appItem);
+                                trendingItems.map((trendingItem) => {
+                                  output += trendingAppsItem(trendingItem);
                                 })
 
                             output += `
