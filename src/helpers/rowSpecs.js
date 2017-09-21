@@ -28,7 +28,7 @@ const rowSpecs = {
     titleColor: '#0093ed'
   },
   apps: {
-    titleColor: '#f4f4f4'
+    titleColor: '#00bf60'
   },
   music: {
     titleColor: '#ff9000'

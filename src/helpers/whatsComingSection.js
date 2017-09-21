@@ -5,10 +5,12 @@ function whatsComingSection( whatsComingItems ) {
   // 
   const keyValues = Object.keys(whatsComingItems);
 
+  console.log('keyValues: ', keyValues);
+
   // splice the whatsComingItems into rows one and two
   const rowOneItems = keyValues.slice(0, 2)
-  const rowTwoItems = keyValues.slice(2, 2)
-  const rowThreeItems = keyValues.slice(4, 2)
+  const rowTwoItems = keyValues.slice(2, 4)
+  const rowThreeItems = keyValues.slice(4, 6)
 	let output = '';
 
   // Whats coming section outter HTML
@@ -46,6 +48,8 @@ function whatsComingSection( whatsComingItems ) {
 	`
 
   output += whatsComingRow(rowOneItems, whatsComingItems);
+  output += whatsComingRow(rowTwoItems, whatsComingItems);
+  output += whatsComingRow(rowThreeItems, whatsComingItems);
 	
 	return output;
 

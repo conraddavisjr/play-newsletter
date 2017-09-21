@@ -48,6 +48,7 @@ console.log('templateOutput: ', templateOutput)
 
 
 // WHAT'S COMING SECTION
+console.log('whatsComing: ', whatsComing);
 templateOutput += whatsComingSection(whatsComing)
 
 templateOutput += cta

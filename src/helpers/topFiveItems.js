@@ -4,14 +4,9 @@
 const topFiveItemsRowOne = require('../templates/topFiveItemsRowOne.js')
 const topFiveItemsRowTwo = require('../templates/topFiveItemsRowTwo.js')
 const rowSpecs = require('../helpers/rowSpecs.js')
+const getLastWord = require('../helpers/getLastWord.js')
 
 function topFiveItems( title, rowItems ) {
-
-  // parse the last word of the row title to determine the bgColor of the items row
-  function getLastWord(title) {
-    var lastWord = title.split(" ");
-    return lastWord[lastWord.length - 1].toLowerCase();
-  }
 
   const { dimensions, titleColor, bgcolor } = rowSpecs[getLastWord(title)]
   const imgWidth = dimensions[0]

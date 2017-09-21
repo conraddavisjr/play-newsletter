@@ -1,6 +1,12 @@
 const whatsComingDetails = require('./whatsComingDetails')
+const rowSpecs = require('../helpers/rowSpecs.js')
+const getLastWord = require('../helpers/getLastWord.js')
 
 function whatsComingItem (title, details) {
+
+console.log('whatsComingItem - title: ', title);
+
+const { titleColor } = rowSpecs[getLastWord(title)]
 
 let output = '';
 
@@ -24,7 +30,7 @@ let output = '';
                           <td valign="top">
                             <table cellpadding="0" cellspacing="0" border="0">
                               <tr>
-                                <td valign="bottom" style="color:#00bf60; font-size:24px;font-family: 'Roboto',Helvetica,Arial,sans-serif;letter-spacing:normal;line-height: 26px; text-align: left; font-weight: 500; text-transform: uppercase;"> 
+                                <td valign="bottom" style="color:${titleColor}; font-size:24px;font-family: 'Roboto',Helvetica,Arial,sans-serif;letter-spacing:normal;line-height: 26px; text-align: left; font-weight: 500; text-transform: uppercase;"> 
                                   ${title}
                                 </td>
                               </tr>
@@ -46,7 +52,7 @@ let output = '';
                 <!--[if (gte mso 9)|(IE)]><table width="290" cellpadding="0" cellspacing="0" border="0" align="left"><tr><td valign="top"><![endif]-->
                 <table cellpadding="0" cellspacing="0" border="0" width="100%">
                   <tr>
-                    <td height="5" bgcolor="#00bf60" style="font-size:1px;line-height:1px;mso-line-height-rule:exactly;padding:0; background-color: #00bf60;">&nbsp;</td>
+                    <td height="5" bgcolor="${titleColor}" style="font-size:1px;line-height:1px;mso-line-height-rule:exactly;padding:0; background-color: ${titleColor};">&nbsp;</td>
                   </tr>
                 </table>
                 <!--[if (gte mso 9)|(IE)]></td></tr></table> <![endif]-->

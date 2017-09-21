@@ -305,6 +305,128 @@
 			    "href": "https://play.google.com/store/apps/details?id=com.tinyco.futurama"
 			  }
 		    ]
+		},
+		"music": {
+			"title": "Shrek Sugar Fever",
+		    "author": "by genera games",
+		    "src": "https://services.google.com/fh/files/emails/gp_nl_august17_blue_apron.jpg",
+		    "alt": "shrek Sugar Fever image",
+		    "href": "https://play.google.com/store/apps/details?id=com.nexonm.tfa",
+		    "details": [
+		    	{
+			    "title": "Futurama: Worlds of Tomorrow",
+			    "author": "by TinyCo",
+			    "src": "https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png",
+			    "alt": "Valerian: City of Alpha",
+			    "href": "https://play.google.com/store/apps/details?id=com.tinyco.futurama"
+			  },
+			  {
+			    "title": "Futurama: Worlds of Tomorrow",
+			    "author": "by TinyCo",
+			    "src": "https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png",
+			    "alt": "Valerian: City of Alpha",
+			    "href": "https://play.google.com/store/apps/details?id=com.tinyco.futurama"
+			  },
+			  {
+			    "title": "Futurama: Worlds of Tomorrow",
+			    "author": "by TinyCo",
+			    "src": "https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png",
+			    "alt": "Valerian: City of Alpha",
+			    "href": "https://play.google.com/store/apps/details?id=com.tinyco.futurama"
+			  }
+		    ]
+		},
+
+		"movies": {
+			"title": "Shrek Sugar Fever",
+		    "author": "by genera games",
+		    "src": "https://services.google.com/fh/files/emails/gp_nl_august17_blue_apron.jpg",
+		    "alt": "shrek Sugar Fever image",
+		    "href": "https://play.google.com/store/apps/details?id=com.nexonm.tfa",
+		    "details": [
+		    	{
+			    "title": "Futurama: Worlds of Tomorrow",
+			    "author": "by TinyCo",
+			    "src": "https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png",
+			    "alt": "Valerian: City of Alpha",
+			    "href": "https://play.google.com/store/apps/details?id=com.tinyco.futurama"
+			  },
+			  {
+			    "title": "Futurama: Worlds of Tomorrow",
+			    "author": "by TinyCo",
+			    "src": "https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png",
+			    "alt": "Valerian: City of Alpha",
+			    "href": "https://play.google.com/store/apps/details?id=com.tinyco.futurama"
+			  },
+			  {
+			    "title": "Futurama: Worlds of Tomorrow",
+			    "author": "by TinyCo",
+			    "src": "https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png",
+			    "alt": "Valerian: City of Alpha",
+			    "href": "https://play.google.com/store/apps/details?id=com.tinyco.futurama"
+			  }
+		    ]
+		},
+		"tv": {
+			"title": "Shrek Sugar Fever",
+		    "author": "by genera games",
+		    "src": "https://services.google.com/fh/files/emails/gp_nl_august17_blue_apron.jpg",
+		    "alt": "shrek Sugar Fever image",
+		    "href": "https://play.google.com/store/apps/details?id=com.nexonm.tfa",
+		    "details": [
+		    	{
+			    "title": "Futurama: Worlds of Tomorrow",
+			    "author": "by TinyCo",
+			    "src": "https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png",
+			    "alt": "Valerian: City of Alpha",
+			    "href": "https://play.google.com/store/apps/details?id=com.tinyco.futurama"
+			  },
+			  {
+			    "title": "Futurama: Worlds of Tomorrow",
+			    "author": "by TinyCo",
+			    "src": "https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png",
+			    "alt": "Valerian: City of Alpha",
+			    "href": "https://play.google.com/store/apps/details?id=com.tinyco.futurama"
+			  },
+			  {
+			    "title": "Futurama: Worlds of Tomorrow",
+			    "author": "by TinyCo",
+			    "src": "https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png",
+			    "alt": "Valerian: City of Alpha",
+			    "href": "https://play.google.com/store/apps/details?id=com.tinyco.futurama"
+			  }
+		    ]
+		},
+
+		"books": {
+			"title": "Shrek Sugar Fever",
+		    "author": "by genera games",
+		    "src": "https://services.google.com/fh/files/emails/gp_nl_august17_blue_apron.jpg",
+		    "alt": "shrek Sugar Fever image",
+		    "href": "https://play.google.com/store/apps/details?id=com.nexonm.tfa",
+		    "details": [
+		    	{
+			    "title": "Futurama: Worlds of Tomorrow",
+			    "author": "by TinyCo",
+			    "src": "https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png",
+			    "alt": "Valerian: City of Alpha",
+			    "href": "https://play.google.com/store/apps/details?id=com.tinyco.futurama"
+			  },
+			  {
+			    "title": "Futurama: Worlds of Tomorrow",
+			    "author": "by TinyCo",
+			    "src": "https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png",
+			    "alt": "Valerian: City of Alpha",
+			    "href": "https://play.google.com/store/apps/details?id=com.tinyco.futurama"
+			  },
+			  {
+			    "title": "Futurama: Worlds of Tomorrow",
+			    "author": "by TinyCo",
+			    "src": "https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png",
+			    "alt": "Valerian: City of Alpha",
+			    "href": "https://play.google.com/store/apps/details?id=com.tinyco.futurama"
+			  }
+		    ]
 		}
 	}
 }
