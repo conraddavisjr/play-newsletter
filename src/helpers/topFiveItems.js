@@ -1,40 +1,11 @@
 // output the newsletter's intro body copy
 // 
 
-topFiveItemsRowOne = require('../templates/topFiveItemsRowOne.js')
-topFiveItemsRowTwo = require('../templates/topFiveItemsRowTwo.js')
+const topFiveItemsRowOne = require('../templates/topFiveItemsRowOne.js')
+const topFiveItemsRowTwo = require('../templates/topFiveItemsRowTwo.js')
+const rowSpecs = require('../helpers/rowSpecs.js')
 
 function topFiveItems( title, rowItems ) {
-
-  const rowSpecs = {
-    games: {
-      dimensions: [90, 90], // width, height
-      titleColor: '#00bf60',
-      bgcolor: '#f4f4f4'
-    },
-    songs: {
-      dimensions: [90, 90],
-      titleColor: '#ff9000'
-    },
-    albums: {
-      dimensions: [90, 90],
-      titleColor: '#ff9000',
-      bgcolor: '#f4f4f4'
-    },
-    shows: {
-      dimensions: [90, 90],
-      titleColor: '#d40000'
-    },
-    movies: {
-      dimensions: [90, 138],
-      titleColor: '#d40000',
-      bgcolor: '#f4f4f4'
-    },
-    books: {
-      dimensions: [90, 138],
-      titleColor: '#0093ed'
-    }
-  }
 
   // parse the last word of the row title to determine the bgColor of the items row
   function getLastWord(title) {
@@ -50,7 +21,7 @@ function topFiveItems( title, rowItems ) {
 
   // splice the rowItems into rows one and two
   const rowOneItems = rowItems.slice(0, 3)
-  const rowTwoItems = rowItems.slice(0, 2)
+  const rowTwoItems = rowItems.slice(3, 5)
 
   // container for the top five items
   let topFiveItems = ''
