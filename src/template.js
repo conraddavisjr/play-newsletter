@@ -18,7 +18,7 @@ header = require('./templates/header.js')
 introBody = require('./templates/introBody.js')
 trendingApps = require('./templates/trendingApps.js')
 topFiveItems = require('./helpers/topFiveItems.js')
-whatsComing = require('./templates/whatsComing.js')
+whatsComingSection = require('./helpers/whatsComingSection.js')
 cta = require('./templates/cta.js')
 footer = require('./templates/footer.js')
 htmlFoot = require('./templates/htmlFoot.js')
@@ -48,7 +48,7 @@ console.log('templateOutput: ', templateOutput)
 
 
 // WHAT'S COMING SECTION
-templateOutput += whatsComing
+templateOutput += whatsComingSection()
 
 templateOutput += cta
 templateOutput += footer

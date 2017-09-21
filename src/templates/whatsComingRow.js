@@ -1,16 +1,27 @@
 const whatsComingItem = require('./whatsComingItem')
 
-const whatsComingRow = `
+function whatsComingRow() {
 
-<tr>
-  <td style="font-size:0;padding:0;" align="center">
+  let output = '';
 
-    ${whatsComingItem}
-    ${whatsComingItem}
 
-  </td>
-</tr>
+  output += `
 
-`
+    <tr>
+      <td style="font-size:0;padding:0;" align="center">
+
+        ${whatsComingItem}
+        ${whatsComingItem}
+
+      </td>
+    </tr>
+
+  `
+
+  return output;
+
+}
+
+
 
 module.exports = whatsComingRow;
