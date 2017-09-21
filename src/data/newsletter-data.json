@@ -1,7 +1,8 @@
 {
-	"topTrendingApps": {
+	"month": "October",
+	"year": 2017,
 
-		"title": "TOP TRENDING APPS IN JULY",
+	"topTrendingApps": {
 		"trendingItems": [
 			{
 				"title": "1st HBO NOW",
@@ -284,11 +285,6 @@
 
 	"whatsComing": {
 		"apps": {
-			"title": "Shrek Sugar Fever",
-		    "author": "by genera games",
-		    "src": "https://services.google.com/fh/files/emails/gp_nl_august17_blue_apron.jpg",
-		    "alt": "shrek Sugar Fever image",
-		    "href": "https://play.google.com/store/apps/details?id=com.nexonm.tfa",
 		    "details": [
 		    	{
 			    "title": "Futurama: Worlds of Tomorrow",
@@ -315,11 +311,6 @@
 		},
 
 		"games": {
-			"title": "Shrek Sugar Fever",
-		    "author": "by genera games",
-		    "src": "https://services.google.com/fh/files/emails/gp_nl_august17_blue_apron.jpg",
-		    "alt": "shrek Sugar Fever image",
-		    "href": "https://play.google.com/store/apps/details?id=com.nexonm.tfa",
 		    "details": [
 		    	{
 			    "title": "Futurama: Worlds of Tomorrow",
@@ -345,11 +336,6 @@
 		    ]
 		},
 		"music": {
-			"title": "Shrek Sugar Fever",
-		    "author": "by genera games",
-		    "src": "https://services.google.com/fh/files/emails/gp_nl_august17_blue_apron.jpg",
-		    "alt": "shrek Sugar Fever image",
-		    "href": "https://play.google.com/store/apps/details?id=com.nexonm.tfa",
 		    "details": [
 		    	{
 			    "title": "Futurama: Worlds of Tomorrow",
@@ -376,11 +362,6 @@
 		},
 
 		"movies": {
-			"title": "Shrek Sugar Fever",
-		    "author": "by genera games",
-		    "src": "https://services.google.com/fh/files/emails/gp_nl_august17_blue_apron.jpg",
-		    "alt": "shrek Sugar Fever image",
-		    "href": "https://play.google.com/store/apps/details?id=com.nexonm.tfa",
 		    "details": [
 		    	{
 			    "title": "Futurama: Worlds of Tomorrow",
@@ -406,28 +387,37 @@
 		    ]
 		},
 		"tv": {
-			"title": "Shrek Sugar Fever",
-		    "author": "by genera games",
-		    "src": "https://services.google.com/fh/files/emails/gp_nl_august17_blue_apron.jpg",
-		    "alt": "shrek Sugar Fever image",
-		    "href": "https://play.google.com/store/apps/details?id=com.nexonm.tfa",
 		    "details": [
 		    	{
-			    "title": "Futurama: Worlds of Tomorrow",
+			    "title": "1st Futurama: Worlds of Tomorrow",
 			    "author": "by TinyCo",
 			    "src": "https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png",
 			    "alt": "Valerian: City of Alpha",
 			    "href": "https://play.google.com/store/apps/details?id=com.tinyco.futurama"
 			  },
 			  {
-			    "title": "Futurama: Worlds of Tomorrow",
+			    "title": "2nd Futurama: Worlds of Tomorrow",
 			    "author": "by TinyCo",
 			    "src": "https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png",
 			    "alt": "Valerian: City of Alpha",
 			    "href": "https://play.google.com/store/apps/details?id=com.tinyco.futurama"
 			  },
 			  {
-			    "title": "Futurama: Worlds of Tomorrow",
+			    "title": "3rd Futurama: Worlds of Tomorrow",
+			    "author": "by TinyCo",
+			    "src": "https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png",
+			    "alt": "Valerian: City of Alpha",
+			    "href": "https://play.google.com/store/apps/details?id=com.tinyco.futurama"
+			  },
+			  {
+			    "title": "4th Futurama: Worlds of Tomorrow",
+			    "author": "by TinyCo",
+			    "src": "https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png",
+			    "alt": "Valerian: City of Alpha",
+			    "href": "https://play.google.com/store/apps/details?id=com.tinyco.futurama"
+			  },
+			  {
+			    "title": "5th Futurama: Worlds of Tomorrow",
 			    "author": "by TinyCo",
 			    "src": "https://services.google.com/fh/files/emails/gp_nl_august17_valerian.png",
 			    "alt": "Valerian: City of Alpha",
@@ -437,11 +427,7 @@
 		},
 
 		"books": {
-			"title": "Shrek Sugar Fever",
-		    "author": "by genera games",
-		    "src": "https://services.google.com/fh/files/emails/gp_nl_august17_blue_apron.jpg",
-		    "alt": "shrek Sugar Fever image",
-		    "href": "https://play.google.com/store/apps/details?id=com.nexonm.tfa",
+		    "customHeight": 468,
 		    "details": [
 		    	{
 			    "title": "Futurama: Worlds of Tomorrow",

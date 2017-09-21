@@ -1,8 +1,8 @@
 const trendingAppsItem = require('../templates/trendingAppsItem.js')
 
-function trendingApps(topTrendingApps) {
+function trendingApps(month, topTrendingApps) {
 
-const { title, trendingItems } = topTrendingApps
+const { trendingItems } = topTrendingApps
 
 let output = '';
 
@@ -26,7 +26,7 @@ output += `
                         <table style="max-width: 400px;" align="center" cellpadding="0" cellspacing="0" border="0" width="100%">
                           <tr>
                             <td style="text-align:center; text-transform: uppercase;color:#ffffff;font-family: Roboto,Helvetica,Arial,sans-serif;font-size:24px;letter-spacing:normal;line-height: 34px;">
-                              <h3 style="font-size: 24px; margin-top: 25px; margin-bottom: 25px;"><strong>${title}</strong></h3></td>
+                              <h3 style="font-size: 24px; margin-top: 25px; margin-bottom: 25px;"><strong>TOP TRENDING APPS IN ${month}</strong></h3></td>
                           </tr>
                         </table>
                       </td>
@@ -82,7 +82,7 @@ output += `
                     </tr>
                     <tr>
                       <td style="text-align:left; color:#414141;font-family: 'Roboto',Helvetica,Arial,sans-serif;font-size:32px;letter-spacing:normal;line-height: 34px;">
-                        <h3 style="margin-bottom: 5px; font-size: 32px; font-weight: 200; margin-top: 20px; text-transform: uppercase;">THE U.S. TOP CHARTS FROM July</h3></td>
+                        <h3 style="margin-bottom: 5px; font-size: 32px; font-weight: 200; margin-top: 20px; text-transform: uppercase;">THE U.S. TOP CHARTS FROM ${month}</h3></td>
                     </tr>
                   </table>
                   <!--[if (gte mso 9)|(IE)]></td></tr></table> <![endif]-->

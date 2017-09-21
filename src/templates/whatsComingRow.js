@@ -9,7 +9,7 @@ function whatsComingRow(rowItems, whatsComingItems) {
     <tr>
       <td style="font-size:0;padding:0;" align="center">
     `
-      rowItems.map((item) => { output += whatsComingItem(item, whatsComingItems[item].details) })
+      rowItems.map((item) => { output += whatsComingItem(item, whatsComingItems[item]) })
 
   output += `
       </td>

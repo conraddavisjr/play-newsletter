@@ -1,11 +1,11 @@
 const whatsComingRow = require('../templates/whatsComingRow.js')
 
-function whatsComingSection( whatsComingItems ) {
+function whatsComingSection( month, whatsComingItems ) {
 
   // 
   const keyValues = Object.keys(whatsComingItems);
 
-  console.log('keyValues: ', keyValues);
+  console.log('whatsComingItems: ', whatsComingItems);
 
   // splice the whatsComingItems into rows one and two
   const rowOneItems = keyValues.slice(0, 2)
@@ -37,7 +37,7 @@ function whatsComingSection( whatsComingItems ) {
 		                        </tr>
 		                        <tr>
 		                          <td style="text-align:left; color:#414141;font-family: 'Roboto',Helvetica,Arial,sans-serif;font-size:32px;letter-spacing:normal;line-height: 34px;">
-		                            <h3 style="margin-bottom: 5px; font-size: 32px; font-weight: 200; margin-top: 20px; text-transform: uppercase;">What&#39;s coming to Play in August</h3></td>
+		                            <h3 style="margin-bottom: 5px; font-size: 32px; font-weight: 200; margin-top: 20px; text-transform: uppercase;">What&#39;s coming to Play in ${month}</h3></td>
 		                        </tr>
 		                        <tr>
 		                          <td height="10" style="font-size:1px;line-height:1px;mso-line-height-rule:exactly;padding:0;">&nbsp;</td>

@@ -10,7 +10,7 @@ let templateOutput = '';
 // JSON data
 newsletterData = require('./data/newsletter-data.json')
 // deconstruct the data obj
-const { topTrendingApps, topFive, whatsComing } = newsletterData
+const { year, month, topTrendingApps, topFive, whatsComing } = newsletterData
 
 // import the newsletter templates
 htmlHead = require('./templates/htmlHead.js')
@@ -27,7 +27,7 @@ htmlFoot = require('./templates/htmlFoot.js')
 // add the newsletter DOC head to the templateOutput
 templateOutput += htmlHead
 // add the newsletter header to the templateOutput
-templateOutput += header
+templateOutput += header(month, year)
 // add the newsletter's intro body to the templateOutput
 templateOutput += introBody
 
@@ -35,7 +35,7 @@ templateOutput += introBody
 // 
 // TRENDING APPS SECTION
 // 
-templateOutput += trendingApps(topTrendingApps)
+templateOutput += trendingApps(month, topTrendingApps)
 
 // 
 // TOP FIVE SECTION
@@ -51,7 +51,7 @@ templateOutput += `</table></td></tr>`
 // 
 // WHAT'S COMING SECTION
 // 
-templateOutput += whatsComingSection(whatsComing)
+templateOutput += whatsComingSection(month, whatsComing)
 
 // CTA
 templateOutput += cta

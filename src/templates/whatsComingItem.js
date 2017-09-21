@@ -2,13 +2,15 @@ const whatsComingDetails = require('./whatsComingDetails')
 const rowSpecs = require('../helpers/rowSpecs.js')
 const getLastWord = require('../helpers/getLastWord.js')
 
-function whatsComingItem (title, details) {
+function whatsComingItem (title, whatsComingItems) {
 
-console.log('whatsComingItem - title: ', title);
+  const { details } = whatsComingItems
 
-const { titleColor } = rowSpecs[getLastWord(title)]
+  const customHeight = whatsComingItems.customHeight || 370
 
-let output = '';
+  const { titleColor } = rowSpecs[getLastWord(title)]
+
+  let output = '';
 
   output += `
 
@@ -70,7 +72,7 @@ let output = '';
                   </tr>
                   <tr>
                     <td width="11"></td>
-                    <td height="370" valign="top" class="heightAuto">
+                    <td height="${customHeight}" valign="top" class="heightAuto">
                       <table border="0" cellpadding="0" cellspacing="0" width="100%">
                         <tr>
                           <td align="center"> <a href="https://play.google.com/store/apps/details?id=com.nexonm.tfa" target="_blank"> <img src="https://services.google.com/fh/files/emails/gp_nl_august17_titanfall.jpg" alt="Titanfall: Assault" style="display: block" width="268" height="268" border="0" /> </a></td>
