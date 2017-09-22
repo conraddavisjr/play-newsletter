@@ -35,11 +35,8 @@ function markdownParser() {
 			if (contentLinks != null) {
 				newLinks = contentLinks.map((link) => {
 					console.log("link: ", link);
-					let parsedLink;
-					parsedLink = link.substr(1);
-					parsedLink = parsedLink.slice(0, -1);
-
-					parsedLink = parsedLink.split('](')
+					let parsedLink = link.substr(1);
+					parsedLink = parsedLink.slice(0, -1).split('](');
 					console.log("parsedLink: ", parsedLink);
 					return parsedLink
 
@@ -103,7 +100,7 @@ function markdownParser() {
 
 
 	// console.log('parsedContent: ', parsedContent);
-	return parsedContent;
+	return parsedContent.join('');
 }
 
 module.exports = markdownParser;
