@@ -1,12 +1,14 @@
+// import the markdown data
 const markdown = require('../data/markdown.js')
 
-let parsedContent = markdown.split(/\n/g)
-parsedContent = parsedContent.map((item) => {
-	return item.replace('\t', '')
-})
-parsedContent = parsedContent.filter((item) => {
-	return item != ''
-})
+// MARKDOWN TO ARRAY ITEMS
+// break the markdown into an array of filtered content
+// 
+let parsedContent = 
+	markdown.split(/\n/g)
+					.map((item) => { return item.replace('\t', '')})
+				 	.filter((item) => { return item != '' })
+
 const markdownParser = console.log('parsedContent: ', parsedContent);
 
 
