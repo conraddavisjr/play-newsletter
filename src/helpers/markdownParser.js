@@ -42,12 +42,15 @@ function markdownParser() {
 			)
 		},
 		h2: (content) => { 
+			// remove the '**' from the content
+			let parsedContent = content.replace(/\*\*/g, '')
+
 			return (
 				`
 					<tr>
 			      <td style="text-align:left; color:#333333;font-family: 'Roboto',Helvetica,Arial,sans-serif;font-size:30px;letter-spacing:normal;line-height: 35px;">
 			        <h2 style="mso-line-height-rule:exactly; margin-bottom: 20px; margin-top: 35px; font-size: 30px; font-weight: 300;">
-			          ${content}
+			          ${parsedContent}
 			        </h2></td>
 			    </tr>
 				`
@@ -71,8 +74,7 @@ function markdownParser() {
 
 	// decide what wrapper to place the content in
 	parsedContent = parsedContent.map((item) => {
-		// if the first two characters are not '**' give the content a paragraph output
-		// console.log("item.substring(0, 2) == '**' ? h2(item) : paragraph(item): ", item.substring(0, 2) == '**' ? h2(item) : paragraph(item));
+		// if the first two characters are '**' give the content a h2 output, otherwise, give it a paragraph output
 		return item.substring(0, 2) == '**' ? h2(item) : paragraph(item)
 	});
 
