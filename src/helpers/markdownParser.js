@@ -28,18 +28,41 @@ function markdownParser() {
 	const htmlFormats = {
 		paragraph: (content) => {
 			// console.log('paragraph content: ', content);
+			// \[([^\)]+)\]\(([^\)]+)\)
+			let contentLinks = content.match(/\[([^\)]+)\]\(([^\)]+)\)/g, '')
+			let newLinks;
+			// convert markup links to HTML
+			if (contentLinks != null) {
+				newLinks = contentLinks.map((link) => {
+					console.log("link: ", link);
+					let parsedLink;
+					parsedLink = link.substr(1);
+					parsedLink = parsedLink.slice(0, -1);
+
+					parsedLink = parsedLink.split('](')
+					console.log("parsedLink: ", parsedLink);
+					return parsedLink
+
+				})
+			}
+
+			// console.log('newLinks: ', newLinks)
+
 			return(
 				`
+				  <tr>
+				    <td height="10" style="font-size:1px;line-height:1px;mso-line-height-rule:exactly;padding:0;">&nbsp;</td>
+				  </tr>
 					<tr>
 				    <td style="text-align:left; color:#263238;font-family: 'Roboto',Helvetica,Arial,sans-serif;font-size:16px;letter-spacing:normal;line-height: 22px;">
 				      ${content}
 				    </td>
 				  </tr>
-				  <tr>
-				    <td height="20" style="font-size:1px;line-height:1px;mso-line-height-rule:exactly;padding:0;">&nbsp;</td>
-				  </tr>
 				`
 			)
+		},
+		link: (content) => {
+			return `<a href="https://play.google.com/store/books/details/Michael_E_Bakich_Your_Guide_to_the_2017_Total_Sola?id=o5JPDAAAQBAJ&hl=en" target="_blank" style="color:#039be5; font-weight: 400; text-decoration:underline!important;">Your Guide to the 2017 Total Solar Eclipse</a>`
 		},
 		h2: (content) => { 
 			// remove the '**' from the content
