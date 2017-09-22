@@ -48,30 +48,6 @@ function header(month, year){
                                               </table>
                                             </td>
                                           </tr>
-                                          <tr>
-                                            <td height="30" style="font-size:1px;line-height:1px;mso-line-height-rule:exactly;padding:0;">&nbsp;</td>
-                                          </tr>
-                                          <tr>
-                                            <td style="text-align:left; color:#263238;font-family: 'Roboto',Helvetica,Arial,sans-serif;font-size:16px;letter-spacing:normal;line-height: 22px;"> Welcome to the Google Play Newsletter&#33;</td>
-                                          </tr>
-                                          <tr>
-                                            <td height="10" style="font-size:1px;line-height:1px;mso-line-height-rule:exactly;padding:0;">&nbsp;</td>
-                                          </tr>
-                                          <tr>
-                                            <td style="text-align:left; color:#263238;font-family: 'Roboto',Helvetica,Arial,sans-serif;font-size:16px;letter-spacing:normal;line-height: 22px;"> Summer is nearly here&#33; Check out our July trends and what&#39;s coming up on Google Play in August.</td>
-                                          </tr>
-                                          <tr>
-                                            <td height="10" style="font-size:1px;line-height:1px;mso-line-height-rule:exactly;padding:0;">&nbsp;</td>
-                                          </tr>
-                                          <tr>
-                                            <td style="text-align:left; color:#263238;font-family: 'Roboto',Helvetica,Arial,sans-serif;font-size:16px;letter-spacing:normal;line-height: 22px;"> Want more news or just have a question&#63; Email us at <a href="mailto:playnews@google.com" target="_blank" style="color:#039be5; font-weight: 400; text-decoration:underline!important;">playnews&#64;google.com</a> and ask&nbsp;away.</td>
-                                          </tr>
-                                          <tr>
-                                            <td height="20" style="font-size:1px;line-height:1px;mso-line-height-rule:exactly;padding:0;">&nbsp;</td>
-                                          </tr>
-                                          <tr>
-                                            <td align="center"> <img src="https://services.google.com/fh/files/emails/gp_nl_august17_hero.jpg" alt="" width="600" height="320" border="0" style="display:block; max-width: 600px; width: 100%; height:auto;" /></td>
-                                          </tr>
                                           `
   return output;                                       
 } 

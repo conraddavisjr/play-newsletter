@@ -30,8 +30,8 @@ templateOutput += htmlHead
 // add the newsletter header to the templateOutput
 templateOutput += header(month, year)
 // add the newsletter's intro body to the templateOutput
-// templateOutput += introBody
-templateOutput += markdownParser()
+templateOutput += introBody()
+// templateOutput += markdownParser()
 
 
 // 
