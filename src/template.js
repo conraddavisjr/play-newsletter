@@ -22,6 +22,7 @@ whatsComingSection = require('./helpers/whatsComingSection.js')
 cta = require('./templates/cta.js')
 footer = require('./templates/footer.js')
 htmlFoot = require('./templates/htmlFoot.js')
+markdownParser = require('./helpers/markdownParser.js')
 
 
 // add the newsletter DOC head to the templateOutput

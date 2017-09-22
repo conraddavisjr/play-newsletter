@@ -2,7 +2,6 @@
 // 
 
 const footer = `
-
                 	<tr>
                     <td style="border-bottom: 1px solid #414141;font-size:1px;line-height:1px;mso-line-height-rule:exactly;padding:0;">&nbsp;</td>
                   </tr>
