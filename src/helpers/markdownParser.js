@@ -29,26 +29,39 @@ function markdownParser() {
 		paragraph: (content) => {
 			// console.log('paragraph content: ', content);
 			// \[([^\)]+)\]\(([^\)]+)\)
-			let contentLinks = content.match(/\[([^\)]+)\]\(([^\)]+)\)/g, '')
+			let contentLinks = content.match(/\[([^\)]+)\]\(([^\)]+)\)/g, '');
 			let parsedLinks = [];
+			let hasContentLinks = contentLinks != null ? true : false;
+			let markdownLinks = [];
 
 			// extract the content from the markup ex: link name and href
-			if (contentLinks != null) {
+			if (hasContentLinks) {
 				parsedLinks = contentLinks.map((link) => {
-					console.log("link: ", link);
+					// console.log("link: ", link);
+					markdownLinks.push(link);
 					let parsedLink = link.substr(1);
 					parsedLink = parsedLink.slice(0, -1).split('](');
-					console.log("parsedLink: ", parsedLink);
+					// console.log("parsedLink: ", parsedLink);
 					return parsedLink
 
 				})
 			}
 
-			// produce HTML links with with the extracted content
+			// produce HTML links with the extracted content
 			let htmlLinks = parsedLinks.map((content) => {
 				return htmlFormats.link(content)
 			})
-			console.log('htmlLinks: ', htmlLinks);
+
+			// replace content markdown links with HTML links
+			if (hasContentLinks) {
+				let updatedContent = content;
+				for (let i=0; i < markdownLinks.length; i++) {
+					updatedContent = updatedContent.replace(markdownLinks[i], htmlLinks[i])
+					console.log('updatedContent: ', updatedContent);			
+				}
+			}
+
+			// console.log('contentLinks: ', contentLinks);
 
 			// console.log('parsedLinks: ', parsedLinks)
 
