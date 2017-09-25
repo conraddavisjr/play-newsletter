@@ -4,7 +4,11 @@
   "version": "1.0.0",
   "description": "A tool for building data driven emails",
   "main": "",
-  "dependencies": {},
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "jsdom": "^11.2.0",
+    "jsdom-global": "^3.0.2"
+  },
   "devDependencies": {},
   "scripts": {
     "start": "nodemon -w . --exec 'npm run compile'",
