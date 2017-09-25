@@ -1,7 +1,7 @@
 // output the newsletter's intro body copy
 // 
 
-markdownParser = require('../helpers/markdownParser.js')
+// markdownParser = require('../helpers/markdownParser.js')
 
 function introBody() {
 
@@ -13,7 +13,7 @@ function introBody() {
 															    <td align="center">
 															      <table style="max-width: 600px;" border="0" cellpadding="0" cellspacing="0" width="100%">
 															      `
-															        output += markdownParser()
+															        // output + j= markdownParser()
 
 																			output +=
 																				`</table>

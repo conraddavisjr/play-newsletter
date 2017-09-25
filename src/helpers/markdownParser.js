@@ -1,126 +1,63 @@
-// parse markdown content into email HTML output
-// 
+const fs = require('fs')
+const jsdom = require('jsdom');
+const { JSDOM } = jsdom;
+const { window } = new JSDOM();
+const $ = require('jquery')(window);
 
-// import the markdown data
-const markdown = require('../data/markdown.js')
+const { document } = window
+const html = fs.readFileSync('src/data/intro.html', 'utf-8')
 
-function markdownParser() {
+// Set up/clean document
+document.body.innerHTML = html
+$('*').removeAttr('class')
+$('span').contents().unwrap()
 
-	// MARKDOWN TO ARRAY ITEMS
-	// break the markdown into an array of filtered content
-	// 
-
-	let parsedContent = 
-		markdown.split(/\n/g)
-						.map((item) => { return item.replace('\t', '')})
-					 	.filter((item) => { return item != '' })
-
-// `<tr>
-//   <td style="text-align:left; color:#263238;font-family: 'Roboto',Helvetica,Arial,sans-serif;font-size:16px;letter-spacing:normal;line-height: 22px;">
-//     To celebrate this once in a lifetime event, <b>Google</b> and the <b>University of California at Berkeley</b> are partnering for the <a href="https://eclipsemega.movie/" target="_blank" style="color:#039be5; font-weight: 400; text-decoration:underline!important;">Eclipse Megamovie Project</a> that encourages citizen scientists around the country to help gather images of the sun and its atmosphere, the corona. Volunteers armed with standard photography equipment—a camera, telephoto lens, and tripod—will capture photos of the eclipse as the moon’s shadow passes over their part of the country. Once this huge dataset is collected, it’s Google’s turn. We’ll use our technology to algorithmically align and process the submitted images to create a continuous view of the eclipse: the Eclipse Megamovie.
-//   </td>
-// </tr>
-// <tr>
-//   <td height="20" style="font-size:1px;line-height:1px;mso-line-height-rule:exactly;padding:0;">&nbsp;</td>
-// </tr>`
-
-
-	const htmlFormats = {
-		paragraph: (content) => {
-			// console.log('paragraph content: ', content);
-			// \[([^\)]+)\]\(([^\)]+)\)
-			let contentLinks = content.match(/\[([^\)]+)\]\(([^\)]+)\)/g, '');
-			let parsedLinks = [];
-			let hasContentLinks = contentLinks != null ? true : false;
-			let markdownLinks = [];
-
-			// extract the content from the markup ex: link name and href
-			if (hasContentLinks) {
-				parsedLinks = contentLinks.map((link) => {
-					// console.log("link: ", link);
-					markdownLinks.push(link);
-					let parsedLink = link.substr(1);
-					parsedLink = parsedLink.slice(0, -1).split('](');
-					// console.log("parsedLink: ", parsedLink);
-					return parsedLink
-
-				})
-			}
-
-			// produce HTML links with the extracted content
-			let htmlLinks = parsedLinks.map((content) => {
-				return htmlFormats.link(content)
-			})
-
-			// replace content markdown links with HTML links
-			if (hasContentLinks) {
-				let updatedContent = content;
-				for (let i=0; i < markdownLinks.length; i++) {
-					updatedContent = updatedContent.replace(markdownLinks[i], htmlLinks[i])
-					console.log('updatedContent: ', updatedContent);			
-				}
-			}
-
-			// console.log('contentLinks: ', contentLinks);
-
-			// console.log('parsedLinks: ', parsedLinks)
-
-			return(
-				`
-				  <tr>
-				    <td height="10" style="font-size:1px;line-height:1px;mso-line-height-rule:exactly;padding:0;">&nbsp;</td>
-				  </tr>
-					<tr>
-				    <td style="text-align:left; color:#263238;font-family: 'Roboto',Helvetica,Arial,sans-serif;font-size:16px;letter-spacing:normal;line-height: 22px;">
-				      ${content}
-				    </td>
-				  </tr>
-				`
-			)
-		},
-		link: (content) => {
-			return `<a href="${content[1]}" target="_blank" style="color:#039be5; font-weight: 400; text-decoration:underline!important;">${content[0]}</a>`
-		},
-		h2: (content) => { 
-			// remove the '**' from the content
-			let parsedContent = content.replace(/\*\*/g, '')
-
-			return (
-				`
-					<tr>
-			      <td style="text-align:left; color:#333333;font-family: 'Roboto',Helvetica,Arial,sans-serif;font-size:30px;letter-spacing:normal;line-height: 35px;">
-			        <h2 style="mso-line-height-rule:exactly; margin-bottom: 20px; margin-top: 35px; font-size: 30px; font-weight: 300;">
-			          ${parsedContent}
-			        </h2></td>
-			    </tr>
-				`
-			)
-		},
-		image: (content) => { 
-			return (
-				`
-					<tr>
-            <td height="10" style="font-size:1px;line-height:1px;mso-line-height-rule:exactly;padding:0;">&nbsp;</td>
-          </tr>
-          <tr>
-            <td align="center"> <img src="https://services.google.com/fh/files/emails/gp_nl_august17_hero.jpg" alt="" width="600" height="320" border="0" style="display:block; max-width: 600px; width: 100%; height:auto;" /></td>
-          </tr>
-				`
-			)
-		}
-	}
-
-	const { paragraph, h2 } = htmlFormats;
-
-	// decide what wrapper to place the content in
-	parsedContent = parsedContent.map((item) => {
-		// if the first two characters are '**' give the content a h2 output, otherwise, give it a paragraph output
-		return item.substring(0, 2) == '**' ? h2(item) : paragraph(item)
-	});
-
-
-	// console.log('parsedContent: ', parsedContent);
-	return parsedContent.join('');
+const TEMPLATES = {
+  p: input => `
+    <tr>
+      <td>
+        ${input}
+      </td>
+    </tr>
+  `,
+  h1: input => `
+    <tr>
+      <td>
+        ${input}
+      </td>
+    </tr>
+  `,
+  h2: input => `
+    <tr>
+      <td>
+        ${input}
+      </td>
+    </tr>
+  `,
+  other: input => input
 }
 
-module.exports = markdownParser;
+const BLACKLISTED_ELS = ['meta', 'style']
+
+let output = []
+$('body > *').each((i, el) => {
+  $el = $(el)
+
+  const type = el.nodeName.toLowerCase()
+  const template = TEMPLATES[type] || TEMPLATES['other']
+
+  // Escape if unsupported type
+  if (BLACKLISTED_ELS.includes(type)) return
+  if ($el.html() === '<span></span>') return
+
+  // Update nested <a>'s
+  $('a', el).map((j, a) => {
+    const $a = $(a)
+    const style = 'style="color:blue;"'
+    $a.replaceWith(`<a data-party ${style} href="${$a.attr('href')}">${$a.text()}</a>`)
+  })
+
+  output.push(template(el.outerHTML))
+})
+
+console.log(output.join('\n\n'))
