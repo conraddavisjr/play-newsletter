@@ -30,10 +30,11 @@ function markdownParser() {
 			// console.log('paragraph content: ', content);
 			// \[([^\)]+)\]\(([^\)]+)\)
 			let contentLinks = content.match(/\[([^\)]+)\]\(([^\)]+)\)/g, '')
-			let newLinks;
-			// convert markup links to HTML
+			let parsedLinks = [];
+
+			// extract the content from the markup ex: link name and href
 			if (contentLinks != null) {
-				newLinks = contentLinks.map((link) => {
+				parsedLinks = contentLinks.map((link) => {
 					console.log("link: ", link);
 					let parsedLink = link.substr(1);
 					parsedLink = parsedLink.slice(0, -1).split('](');
@@ -43,7 +44,13 @@ function markdownParser() {
 				})
 			}
 
-			// console.log('newLinks: ', newLinks)
+			// produce HTML links with with the extracted content
+			let htmlLinks = parsedLinks.map((content) => {
+				return htmlFormats.link(content)
+			})
+			console.log('htmlLinks: ', htmlLinks);
+
+			// console.log('parsedLinks: ', parsedLinks)
 
 			return(
 				`
@@ -59,7 +66,7 @@ function markdownParser() {
 			)
 		},
 		link: (content) => {
-			return `<a href="https://play.google.com/store/books/details/Michael_E_Bakich_Your_Guide_to_the_2017_Total_Sola?id=o5JPDAAAQBAJ&hl=en" target="_blank" style="color:#039be5; font-weight: 400; text-decoration:underline!important;">Your Guide to the 2017 Total Solar Eclipse</a>`
+			return `<a href="${content[1]}" target="_blank" style="color:#039be5; font-weight: 400; text-decoration:underline!important;">${content[0]}</a>`
 		},
 		h2: (content) => { 
 			// remove the '**' from the content
