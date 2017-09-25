@@ -14,19 +14,27 @@ $('span').contents().unwrap()
 
 const TEMPLATES = {
 	p: content	=> `
-	  <tr>
-	    <td height="10" style="font-size:1px;line-height:1px;mso-line-height-rule:exactly;padding:0;">&nbsp;</td>
-	  </tr>
 		<tr>
 	    <td style="text-align:left; color:#263238;font-family: 'Roboto',Helvetica,Arial,sans-serif;font-size:16px;letter-spacing:normal;line-height: 22px;">
 	      ${content}
 	    </td>
 	  </tr>
+	  <tr>
+	    <td height="10" style="font-size:1px;line-height:1px;mso-line-height-rule:exactly;padding:0;">&nbsp;</td>
+	  </tr>
+	`,
+	h1: content => `
+		<tr>
+      <td style="text-align:left; color:#333333;font-family: 'Roboto',Helvetica,Arial,sans-serif;font-size:30px;letter-spacing:normal;line-height: 35px;">
+        <h2 style="mso-line-height-rule:exactly; margin-bottom: 20px; margin-top: 30px; font-size: 30px; font-weight: 300;">
+          ${content}
+        </h2></td>
+    </tr>
 	`,
 	h2: content => `
 		<tr>
       <td style="text-align:left; color:#333333;font-family: 'Roboto',Helvetica,Arial,sans-serif;font-size:30px;letter-spacing:normal;line-height: 35px;">
-        <h2 style="mso-line-height-rule:exactly; margin-bottom: 20px; margin-top: 35px; font-size: 30px; font-weight: 300;">
+        <h2 style="mso-line-height-rule:exactly; margin-bottom: 20px; margin-top: 30px; font-size: 30px; font-weight: 300;">
           ${content}
         </h2></td>
     </tr>
@@ -51,7 +59,7 @@ $('body > *').each((i, el) => {
   const type = el.nodeName.toLowerCase()
   const template = TEMPLATES[type] || TEMPLATES['other']
 
-  // Escape if unsupported type
+  // Escape if unsupported element type
   if (BLACKLISTED_ELS.includes(type)) return
   if ($el.html() === '<span></span>') return
 
@@ -61,7 +69,9 @@ $('body > *').each((i, el) => {
     $a.replaceWith(`<a href="${$a.attr('href')}" target="_blank" style="color:#039be5; font-weight: 400; text-decoration:underline!important;">${$a.text()}</a>`)
   })
 
-  output.push(template(el.outerHTML))
+  output.push(template(el.innerHTML))
 })
 
-console.log(output.join('\n\n'))
+const htmlContent = output.join('\n\n');
+
+module.exports = htmlContent;

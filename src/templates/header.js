@@ -48,6 +48,9 @@ function header(month, year){
                                               </table>
                                             </td>
                                           </tr>
+                                          <tr>
+                                            <td height="30" style="font-size:1px;line-height:1px;mso-line-height-rule:exactly;padding:0;">&nbsp;</td>
+                                          </tr>
                                           `
   return output;                                       
 } 
